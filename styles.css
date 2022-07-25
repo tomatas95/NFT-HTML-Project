@@ -1,0 +1,134 @@
+:root {
+    /* ### Primary */
+    --Soft: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    /* ### Neutral */
+    --main-bg: hsl(217, 54%, 11%);
+    --card-bg: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+
+body {
+    font-family: "outfit", sans-serif;
+    font-size: 18px;
+    background-color: var(--main-bg);
+}
+
+* {
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width: 400px;
+    margin: 6rem auto 10rem;
+    color: var(--Soft);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 1.2rem;
+    box-shadow: 0px 30px 7px 20px hsl(218, 64%, 10%);
+}
+
+img {
+    max-width: 100%;
+}
+
+p {
+    font-weight: 300;
+}
+
+.container .main-image {
+    position: relative;
+}
+
+.active-icon img {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.active-icon {
+    position: absolute;
+    background-color: var(--Cyan);
+    top: 0;
+    width: 100%;
+    height: calc(100% - 4px);
+    border-radius: 2%;
+    display: block;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.active-icon:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.container h2 {
+    color: var(--white);
+    margin: 1rem 0.5rem 1rem 0rem;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+h2:hover {
+    color: var(--Cyan);
+    cursor: pointer;
+}
+
+.container ul li {
+    display: flex;
+    align-items: center;
+}
+
+.container ul li img {
+    margin-right: 0.4rem;
+}
+
+.container .avatar {
+    border: 1px solid white;
+    border-radius: 50%;
+    width: 2.5rem;
+    margin-right: 1.2rem;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    padding: 2rem 0;
+    justify-content: space-around;
+    border-bottom: 1px solid var(--line);
+}
+
+ul li:first-child {
+    color: var(--Cyan);
+}
+
+.foot {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-top: 1.2rem;
+    padding-bottom: 0.5rem;
+}
+
+article .author {
+    color: var(--white);
+    font-weight: 400;
+}
+
+.author:hover {
+    cursor: pointer;
+    color: var(--Cyan);
+}
+
+@media (min-width: 500px) {
+    .container {
+        width: 390px;
+    }
+}
